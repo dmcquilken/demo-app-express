@@ -11,12 +11,12 @@ module.exports = function(app) {
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({ extended: false }));
 
-	// load routes:
-	var routes = glob.sync("./server/routes/*.js").map((file) => {
-		console.log(path.basename(file));
+	//load routes:
+	var routes = glob.sync('./server/routes/*.js').map((file) => {
 		require('./routes/' + path.basename(file))(app);
     });
 
+	//start server
 	app.listen(config.server.port, () => {
 	  console.log('Server listening on port:' + config.server.port);
 	});

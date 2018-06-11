@@ -1,0 +1,10 @@
+{
+	"datasource":{
+		"host":"192.168.56.100",
+		"port":5432,
+		"username":"demouser",
+		"password":"demouser",
+		"dbname":"blog_posts",
+		"dialect":"postgres"
+	}
+}
