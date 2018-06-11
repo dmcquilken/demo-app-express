@@ -1,4 +1,6 @@
 const router = require('express').Router();
+// const blogPostController = require('../controllers').blog_post;
+
 
 module.exports = (function(app) {
 
