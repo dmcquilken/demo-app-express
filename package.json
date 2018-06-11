@@ -1,0 +1,21 @@
+{
+  "name": "demo-api-express",
+  "version": "1.0.0",
+  "description": "Demonstration app of express-based api to Postgres JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "glob": "^7.1.2",
+    "nodemon": "^1.17.5",
+    "path": "^0.12.7",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.37.10"
+  }
+}
