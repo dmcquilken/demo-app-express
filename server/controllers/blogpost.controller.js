@@ -1,18 +1,14 @@
 // var models = require('../models/blogpost.model.js');
+const blogpost = require('../libs/sequelize').blog_posts;
 
 module.exports = {
 	
 	getAll: function(req, res) {
 
-		res.json(
-			{ 
-				id: 'fdb85448-1eee-4088-9464-9f72b35d5582',
-				data: {
-					post: "This the test!", 
-					title: "This is just a test"
-				}
-			}
-		)
+  			return blogpost
+    			.all()
+    			.then(blogpost => res.status(200).send(blogpost))
+    			.catch(error => res.status(400).send(error));
 
 	},
 

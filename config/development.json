@@ -4,7 +4,7 @@
 		"port":5432,
 		"username":"demouser",
 		"password":"demouser",
-		"dbname":"blog_posts",
+		"dbname":"demoapp",
 		"dialect":"postgres"
 	}
 }
