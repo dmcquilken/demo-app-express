@@ -5,14 +5,14 @@ module.exports = {
 	
 	getAll: function(req, res) {
 
-  			return blogpost
-    			.all()
-    			.then(blogpost => res.status(200).send(blogpost))
-    			.catch(error => res.status(400).send(error));
+		return blogpost
+			.all()
+			.then(blogpost => res.status(200).send(blogpost))
+			.catch(error => res.status(400).send(error));
 
 	},
 
-	getById: function(id) {
+	getById: function(req, res) {
 
 		
 

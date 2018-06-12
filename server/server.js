@@ -12,7 +12,7 @@ module.exports = function(app) {
 	app.use(bodyParser.urlencoded({ extended: false }));
 
 	//load routes:
-	var routes = glob.sync('./server/routes/*.js').map((file) => {
+	glob.sync('./server/routes/*.js').map((file) => {
 		require('./routes/' + path.basename(file))(app);
     });
 
