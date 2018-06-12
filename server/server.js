@@ -3,7 +3,7 @@ const router = require('express').Router();
 const bodyParser = require('body-parser');
 const path = require('path');
 const glob = require('glob');
-const db = require('./libs/sequelize');
+const db = require('./sequelize');
 
 module.exports = function(app) {
 

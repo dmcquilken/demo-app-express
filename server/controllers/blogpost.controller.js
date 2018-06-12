@@ -1,5 +1,5 @@
 // var models = require('../models/blogpost.model.js');
-const blogpost = require('../libs/sequelize').blog_posts;
+const blogpost = require('../sequelize').blog_posts;
 
 module.exports = {
 	
