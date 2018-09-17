@@ -5,14 +5,25 @@ const path = require('path');
 const _ = require('underscore');
 
 const config = require('./globals');
-var env = {};
+var env = envHandler();
+var envConfig = {};
 
-// console.log(path.join(process.env.NODE_ENV + '.json'));
-glob.sync('./config/' + process.env.NODE_ENV + '.json').map((file) => {
+glob.sync('./config/' + env + '.json').map((file) => {
 
-	env = require('./' + path.basename(file));
-	_.extend(config, env);
+	envConfig = require('./' + path.basename(file));
+	_.extend(config, envConfig);
 
 });
+
+function envHandler() {
+
+	if (!process.env.NODE_ENV) {
+		process.env.NODE_ENV = 'development';
+		return process.env.NODE_ENV;
+	}
+	else
+		return process.env.NODE_ENV;
+
+};
 
 module.exports = config;

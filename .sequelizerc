@@ -1,6 +1,7 @@
-const path = require('path');
+const config = require('./config/config');
 
 module.exports = {
-  "models-path": path.resolve('./server/sequelize'),
-  "migrations-path": path.resolve('./server/migrations')
+	"dialect": config.datasource.dialect,
+  	"migrations-path": "./server/migrations/sequelize",
+  	"models-path":  "./server/sequelize"
 };

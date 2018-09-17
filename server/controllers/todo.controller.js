@@ -1,12 +1,12 @@
-const blogpost = require('../sequelize').blog_posts;
+const todo = require('../sequelize').todo;
 
 module.exports = {
 	
 	getAll: function(req, res) {
 
-		return blogpost
+		return todo
 			.all()
-			.then(blogpost => res.status(200).send(blogpost))
+			.then(todo => res.status(200).send(blogpost))
 			.catch(error => res.status(400).send(error));
 
 	},

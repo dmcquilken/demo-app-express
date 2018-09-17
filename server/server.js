@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const glob = require('glob');
 const db = require('./sequelize');
+const chalk = require('chalk');
+
 
 module.exports = function(app) {
 
@@ -13,6 +15,7 @@ module.exports = function(app) {
 
 	//load routes:
 	glob.sync('./server/routes/*.js').map((file) => {
+		console.log(chalk.green('Loading route file: ' + file));
 		require('./routes/' + path.basename(file))(app);
     });
 
