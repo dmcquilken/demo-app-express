@@ -1,4 +1,4 @@
-const todo = require('../sequelize').todo;
+const todo = require('../sequelize').todos;
 
 module.exports = {
 	
@@ -6,14 +6,17 @@ module.exports = {
 
 		return todo
 			.all()
-			.then(todo => res.status(200).send(blogpost))
+			.then(todo => res.status(200).send(todo))
 			.catch(error => res.status(400).send(error));
 
 	},
 
-	getById: function(req, res) {
+	findById: function(req, res) {
 
-		
+		var id = req.params.id;
+		return todo
+			.findById(id).then(todo => res.status(200).send(todo))
+			.catch(error => res.status(400).send(error));
 
 	}
 

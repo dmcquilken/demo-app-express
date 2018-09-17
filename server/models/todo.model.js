@@ -2,7 +2,7 @@
 
 module.exports = function(sequelize, DataTypes) {
 
-  var ToDo = sequelize.define('todo', {
+  var ToDo = sequelize.define('todos', {
   	id: {
   		type: DataTypes.UUID,
   		primaryKey: true
