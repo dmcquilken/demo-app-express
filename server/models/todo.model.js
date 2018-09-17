@@ -7,9 +7,8 @@ module.exports = function(sequelize, DataTypes) {
   		type: DataTypes.UUID,
   		primaryKey: true
   	},
-    data: DataTypes.STRING
+    data: DataTypes.JSON
   }, {
-    
   	timestamps: false,
     classMethods: {
       associate: function(models) {

@@ -10,7 +10,7 @@ const sequelize = new Sequelize(config.datasource.dbname, config.datasource.user
   host: config.datasource.host,
   dialect: config.datasource.dialect,
   operatorsAliases: false,
-
+  omitNull: true,
   pool: {
     max: 5,
     min: 0,

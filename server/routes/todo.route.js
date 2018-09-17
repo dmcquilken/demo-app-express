@@ -9,9 +9,16 @@ module.exports = (function(app) {
 		todoController.findById(req, res);
 	})
 
-
 	app.get('/todos', function (req, res) {
 		todoController.getAll(req, res);
+	})
+
+	app.delete('/todo/:id', function (req, res) {
+		todoController.deleteById(req, res);
+	})
+
+	app.post('/todo', function (req, res) {
+		todoController.create(req, res);
 	})
 
 });
