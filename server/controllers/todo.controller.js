@@ -11,15 +11,6 @@ module.exports = {
 
 	},
 
-	findById: function(req, res) {
-
-		var id = req.params.id;
-		return todo
-			.findById(id).then(todo => res.status(200).send(todo))
-			.catch(error => res.status(400).send(error));
-
-	},
-
 	deleteById: function(req, res) {
 
 		var id = req.params.id;
